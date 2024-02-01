@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .container {
+            text-align: center;
+            animation: slideInUp 1s ease-in-out;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            animation: scaleIn 1s ease-in-out;
+        }
+
+        h1 {
+            color: #e44d26;
+            animation: bounceIn 1s ease-in-out;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        p {
+            color: #333;
+            font-size: 18px;
+            line-height: 1.5;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            animation: slideInUp 1s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(50px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0.8);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes bounceIn {
+            from, 20%, 40%, 60%, 80%, to {
+                animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+                transform: translateX(0);
+            }
+
+            40%, 60% {
+                animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+                transform: translateX(-30px);
+            }
+
+            20%, 80% {
+                animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+                transform: translateX(30px);
+            }
+        }
+    </style>
+    <title>Happy Birthday Abhay Bhaiya!</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Happy Birthday Abhay Bhaiya!</h1>
+            <img src="birthday_cake.jpg" alt="Birthday Cake">
+            <p>Wishing you a day filled with love, joy, and all your heart desires. May this year bring you great success and happiness. Cheers to another fantastic year ahead!</p>
+            <button onclick="playBirthdaySong()">Play Birthday Song</button>
+        </div>
+    </div>
+
+    <script>
+        function playBirthdaySong() {
+            alert("🎉 Happy Birthday Abhay Bhaiya! 🎉");
+            // You can add additional functionality like playing a birthday song using an audio element.
+            // Example: var audio = new Audio('birthday_song.mp3');
+            // audio.play();
+        }
+    </script>
+</body>
+</html>
